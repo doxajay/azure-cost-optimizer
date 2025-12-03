@@ -1,10 +1,8 @@
 terraform {
-  required_version = ">= 1.3.0"
-
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.0" # recent provider that supports policy_assignment
+      version = "~> 4.0"
     }
   }
 }
@@ -12,6 +10,7 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
 
 # Resource group just to have a scope
 resource "azurerm_resource_group" "rg" {
